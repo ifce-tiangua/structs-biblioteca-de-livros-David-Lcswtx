@@ -58,7 +58,7 @@ void livro_exibe(pLivro livros, int qtde){
 	
 }
 
-void livro_desaloca(pLivro livros){
+void livro_desaloca(pLivro livros){	
 	
 	free(livros);
 	
@@ -69,6 +69,12 @@ int main(){
 	int quantidade;
 	
 	scanf("%d",&quantidade);
+	
+	if(quantidade <= 0){
+		printf("Sem livros\n");
+		
+		return 0;
+	}
 	
 	pLivro livros = livro_aloc(quantidade);
 	
